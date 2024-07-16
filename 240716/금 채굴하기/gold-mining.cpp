@@ -41,13 +41,13 @@ int main() {
 
     for(int k=0;k<2*n-1;k++){
 
-        vector<vector<bool>> visited(n,vector<bool>(n,false));
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
+        vector<vector<bool>> visited(n,vector<bool>(n,false));
                 int goldcnt=0;
                 int cost=0;
                 prop(visited,0,k,i,j);
-
+                visited[i][j]=true;
                 for(int a=0;a<n;a++){
                     for(int b=0;b<n;b++){
                         if(visited[a][b]&&numlist[a][b]==1){
@@ -58,7 +58,7 @@ int main() {
                         }
                     }
                 }
-
+                //cout<<"K"<<k<<i<<","<<j<< "gold : "<<goldcnt<<"\n";
                 if(goldcnt*m>=cost){
                     if(maxanswer<goldcnt){
                         maxanswer=goldcnt;

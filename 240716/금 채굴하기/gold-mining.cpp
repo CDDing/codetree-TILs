@@ -59,7 +59,7 @@ int main() {
                     }
                 }
                 //cout<<"K"<<k<<i<<","<<j<< "gold : "<<goldcnt<<"\n";
-                if(goldcnt*m>=cost){
+                if(goldcnt*m>=k*k + (k+1)*(k+1)){
                     if(maxanswer<goldcnt){
                         maxanswer=goldcnt;
                     }

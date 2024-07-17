@@ -56,14 +56,15 @@ int main() {
                     }
 
 
-                    if(possible&&cnt>answer){
+                    if(possible){
                         cnt-=numlist[x][y];
                         cnt-=numlist[x+i-1][y-i+1];
                         cnt-=numlist[x+i+j-2][y-i+j];
                         cnt-=numlist[x+j-1][y+j-1];
-
-                        //cout<<"왼길이 : "<<i<<"오른길이 : "<<j<<" x :"<<x<<"y:"<<y<<"\n";
-                        answer=cnt;
+                        if(answer<cnt){
+                            //cout<<"왼길이 : "<<i<<"오른길이 : "<<j<<" x :"<<x<<"y:"<<y<<"cnt:"<<cnt<<"answer:"<<answer<<"\n";
+                            answer=cnt;
+                        }
                     }
 
 

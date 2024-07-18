@@ -21,31 +21,28 @@ int main() {
 
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
-            int maxx=n-1,maxy=m-1;
-            if(numlist[i][j]>0){
-                for(int a=n-1;a>=i;a--){
-                    for(int b=m-1;b>=j;b--){
-                        if(numlist[i][j]<=0){
-                            if(maxx>a){
-                                maxx=a;
+            
+
+            for(int a=1;a<n;a++){
+                for(int b=1;b<m;b++){
+                    if(i+a<n&&b+j<m){
+                        bool check=true;
+                        for(int x=i;x<i+a;x++){
+                            for(int y=j;y<j+b;y++){
+                                if(numlist[x][y]<=0){
+                                    check=false;
+                                }
                             }
-
-                            if(maxy>b){
-                                maxy=b;
-                            }
-
-
-
-
-                            
                         }
+
+                        if(check&& answer<a*b){
+                            answer=a*b;
+                        }
+
+
+
                     }
                 }
-
-                if(answer<(maxx-i)*(maxy-j)){
-                    answer = (maxx-i+1)*(maxy-j+1);
-                }
-
             }
 
 

@@ -23,9 +23,9 @@ int main() {
         for(int j=0;j<m;j++){
             
 
-            for(int a=1;a<n;a++){
-                for(int b=1;b<m;b++){
-                    if(i+a<n&&b+j<m){
+            for(int a=1;a<=n;a++){
+                for(int b=1;b<=m;b++){
+                    if(i+a<=n&&b+j<=m){
                         bool check=true;
                         for(int x=i;x<i+a;x++){
                             for(int y=j;y<j+b;y++){

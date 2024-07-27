@@ -39,7 +39,7 @@ int main() {
     }
 
     int answer=0;
-    int answerk;
+    int answerk=1;
     for(int k=1;k<100;k++){
         vector<vector<bool>> visited(n,vector<bool>(m,false));
         int areacnt=0;

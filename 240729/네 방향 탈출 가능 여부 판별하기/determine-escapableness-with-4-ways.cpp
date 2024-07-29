@@ -19,7 +19,7 @@ int main() {
 
     queue<pair<int,int>> q;
     q.push({0,0});
-    vector<vector<int>> visited(n,vector<int>(n,false));
+    vector<vector<int>> visited(n,vector<int>(m,false));
     visited[0][0]=true;
     while(!q.empty()){
         auto cur = q.front();

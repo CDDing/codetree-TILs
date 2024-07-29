@@ -45,10 +45,10 @@ int main() {
                 int size = dfs(numlist,visited,i,j);
                 if(size>=4){
                     cnt++;
-                    if(answer<size){
+                }
+                if(answer<size){
                         answer=size;
                     }
-                }
             }
         }
     }

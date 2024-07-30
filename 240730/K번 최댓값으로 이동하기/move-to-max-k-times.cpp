@@ -22,7 +22,7 @@ int main() {
     sty--;
     int curx=stx,cury=sty;
     int answer=0;
-    int ansx,ansy;
+    int ansx=curx,ansy=cury;
     for(int i=0;i<k;i++){
         queue<pair<int,int>> q;
         q.push({curx,cury});

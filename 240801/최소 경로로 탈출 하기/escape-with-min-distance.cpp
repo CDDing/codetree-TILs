@@ -23,7 +23,7 @@ int main() {
     q.push({0,0});
 
     vector<vector<int>> visited(n,vector<int>(m,-1));
-    visited[0][0]=1;
+    visited[0][0]=0;
     while(!q.empty()){
         auto cur = q.front();
         q.pop();
@@ -62,7 +62,7 @@ int main() {
 
 
 
-    cout<<visited[n-1][m-1]-1;
+    cout<<visited[n-1][m-1];
 
 
     return 0;

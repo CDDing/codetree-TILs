@@ -43,8 +43,8 @@ void back(vector<vector<int>>& numlist, vector<pair<int,int>>& wall,vector<bool>
         }
 
         if(visited[r2][c2]!=0){
-            if(visited[r2][c2]<answer||answer==-1){
-                answer=visited[r2][c2];
+            if(visited[r2][c2]-1<answer||answer==-1){
+                answer=visited[r2][c2]-1;
             }
         }
         // for(int i=0;i<n;i++){
@@ -88,6 +88,6 @@ int main() {
     vector<bool> wallvisit(wall.size(),false);
     back(numlist,wall,wallvisit,0);
 
-    cout<<answer-1;
+    cout<<answer;
     return 0;
 }

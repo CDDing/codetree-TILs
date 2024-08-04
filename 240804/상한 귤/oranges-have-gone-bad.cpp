@@ -49,6 +49,16 @@ int main() {
             visited[x][y-1]=visited[x][y]+1;
         }
     }
+
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(visited[i][j]==-1&&gul[i][j]==1){
+                visited[i][j]=-2;
+            }
+        }
+    }
+
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             cout<<visited[i][j]<<" ";

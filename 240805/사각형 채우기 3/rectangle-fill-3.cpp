@@ -13,7 +13,10 @@ long dp(long n){
         return 7;
     }
     else{
-        answer[n] = 2*dp(n-1)+4*dp(n-2);
+        answer[n] = dp(n-1)*2+3*dp(n-2);
+        for(int i=n-3;i>=0;i--){
+            answer[n] += 2*dp(i);
+        }
         answer[n]%=1000000007;
         return answer[n];
     }
@@ -21,8 +24,10 @@ long dp(long n){
 int main() {
     int n;
     cin>>n;
+    answer[0]=1;
     answer[1]=2;
     answer[2]=7;
+    answer[3]=22;
     dp(n);
     cout<<answer[n];
     return 0;

@@ -11,6 +11,7 @@ int main() {
     numlist[3]=1;
     for(int i=4;i<=n;i++){
         numlist[i]=numlist[i-2]+numlist[i-3];
+        numlist[i]%=10007;
     }
 
     cout<<numlist[n];
